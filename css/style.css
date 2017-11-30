@@ -1,4 +1,9 @@
+body{
+	background-image: url("../images/gazon.jpeg");
+	background-position: center;
+}
 #img{
 	width: 100px;
 	height: 100px;
+	text-decoration-color: white;
 }

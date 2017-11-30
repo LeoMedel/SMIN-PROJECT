@@ -38,28 +38,24 @@ function appelTeams(team, ligue)
 			for (var e =0; e < teams.count; e++)
 			{
 				
-				$("#teams").append("<div class='col-md-3' id = 'team"+e+"' onclick=\"appelPlayers('"+teams.teams[e]._links.players.href+"', '"+teams.teams[e].name+"')\"><img id='img' src='"+teams.teams[e].crestUrl+"'><div><h1>"+teams.teams[e].name+"</h1></div></div>");
+				var name = teams.teams[e].name;
+				var img = teams.teams[e].crestUrl;
+				console.log(name +"coucou"+ img);
+				if(img != null)
+				{
+				$("#teams").append("<div class='col-md-3' id = 'team"+e+"' onclick=\"appelPlayers('"+teams.teams[e]._links.players.href+"', '"+teams.teams[e].name+"')\"><img id='img' src='"+img+"' alt='images/bfoot.png'><div><h1>"+teams.teams[e].name+"</h1></div></div>");
+				//$("#logo").attr('src',teams.teams[e].crestUrl);	
+				}
+				else
+				{
+					$("#teams").append("<div class='col-md-3' id = 'team"+e+"' onclick=\"appelPlayers('"+teams.teams[e]._links.players.href+"', '"+teams.teams[e].name+"')\"><img id='img' src='images/bfoot.png' alt='images/bfoot.png'><div><h1>"+teams.teams[e].name+"</h1></div></div>");
+				}	
 			}
 			
 		}
 	});
 }
 
-
-function imgServer(img){
-	var res;
-	$.ajax({
-  		url: img,
-  		crossDomain: true,
-	success: callback {
-            res=1
-	},
-    error: function() {
-        res=2;
-   	}
-   });
-	return res;
-}
 
 function appelPlayers(players, team){
 	$.ajax({
