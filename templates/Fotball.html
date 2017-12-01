@@ -12,43 +12,30 @@
 <body>
 	<h1>Test API de Football</h1>
 
-
-	<div class="list-group" id="ligues"></div>
-		<!--<button type="button" class="list-group-item list-group-item-action" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"</button>-->
+	<div class="list-group" id="ligues", style="background-image: url('../images/gazon.jpeg')"></div>
 	<div>
-
-
-	<div class="collapse" id="collapseExample">
-		<div class="card card-body" id=""> </div>
-	</div>
+		
 		<h1 id="ligue"></h1>
 		
-			<div id="teams" class="row">
-    		</div>		
+		<div id="teams" class="row">
+		</div>		
 		
-
 		<h2 id="teamSel"> </h2>
+
 		<ul id="players"></ul>
 	</div>
-
-
-	<!-- Button trigger modal -->
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-	  Launch demo modal
-	</button>
 
 	<!-- Modal -->
 	<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="exampleModalLongTitle"><h1>Nom Joueur</h1></h5>
+	        <h1 class="modal-title" id="exampleModalLongTitle">Details de Joueur</h1>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	      	<p>position, nombre, etc.</p>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -59,11 +46,8 @@
 
 
 
-<script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript"  src="../js/football.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!--<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script> 
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-
+	<script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript"  src="../js/football.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
