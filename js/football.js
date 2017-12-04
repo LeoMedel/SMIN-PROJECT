@@ -8,9 +8,8 @@ $.ajax({
 	success: function(ligues) {
 		for (var i =0; i<ligues.length; i++)
 		{
-			
-			$("#ligues").append("<button type='button' class='list-group-item list-group-item-success' "+
-			 "onclick=\"appelTeams('"+ligues[i]._links.teams.href+"', '"+ligues[i].caption+"')\">"+ligues[i].caption+"</button>");
+			$("#ligues").append("<a href='#' class='glyphicon glyphicon-globe list-group-item list-group-item-info col-xs-6 col-sm-4'"+
+			 "onclick=\"appelTeams('"+ligues[i]._links.teams.href+"', '"+ligues[i].caption+"')\"> "+ligues[i].caption+"</a>");
 		}
 	}
 });
@@ -44,7 +43,7 @@ function appelTeams(team, ligue)
 				}
 				else
 				{
-					$("#teams").append("<div class='col-md-3' id = 'team"+e+"' onclick=\"appelPlayers('"+teams.teams[e]._links.players.href+"', '"+teams.teams[e].name+"')\"><img id='img' src='images/bfoot.png' alt='images/bfoot.png'><div><h1>"+teams.teams[e].name+"</h1></div></div>");
+					$("#teams").append("<div class='col-md-3' id = 'team"+e+"' onclick=\"appelPlayers('"+teams.teams[e]._links.players.href+"', '"+teams.teams[e].name+"')\"><img id='img' src='images/bfoot.png'><div><h1>"+teams.teams[e].name+"</h1></div></div>");
 				}	
 			}
 		}
@@ -75,7 +74,7 @@ function appelPlayers(players, team){
 					var pay = play.players[e].nationality
 					var date = play.players[e].dateOfBirth;
 					
-					$("#players").append("<li onclick=\"creeModal('"+nom+"', '"+pos+"', '"+jer+"', '"+pay+"', '"+date+"')\","+
+					$("#players").append("<li class='col-xs-6 col-sm-4' onclick=\"creeModal('"+nom+"', '"+pos+"', '"+jer+"', '"+pay+"', '"+date+"')\","+
 						" data-toggle='modal' data-target='#exampleModalLong'id='player"+e+"'>"+play.players[e].name+"</li>");
 				}
 			}
