@@ -1,5 +1,5 @@
 body{
-	background-image: url("../images/gazon.jpeg");
+	background-image: url("../images/champions.jpg");
 	background-position: center;
 }
 #img{
@@ -7,3 +7,7 @@ body{
 	height: 100px;
 	text-decoration-color: white;
 }
+#teams, #players, #teamSel{
+	color: white;
+}
+
