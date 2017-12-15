@@ -4,7 +4,8 @@
   "description": "Project tutora",
   "main": "index.js",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "materialize-css": "^0.100.2"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7"
